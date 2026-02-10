@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
+import 'package:flutter_appproyect/core/app_color.dart';
 
 class TextStylesAnswer {
   static const TextStyle respuesta = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: AppColor.oscuro,
   );
   static const TextStyle pregunta = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    color: Colors.black87,
+    color: AppColor.oscuro,
   );
 }

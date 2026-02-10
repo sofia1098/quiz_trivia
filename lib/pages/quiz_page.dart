@@ -25,21 +25,12 @@ class _QuizPageState extends State<QuizPage> {
       child: Column(
         children: [
           PreguntaWidget(texto: pregunta.texto,),
-          const SizedBox(height: 24),
-          ...List.generate(respuestas.length, (index) {
-            return RespuestasWidget(
-              texto: respuestas[index],
-              esCorrecta: quizService.esCorrecta(index),
-              mostrarResultado: quizService.haySeleccion,
-              onTap: () {
-                setState(() {
-                  quizService.responder(index);
-                });
-              },
-            );
-          }),
-        ],
-      ),
-    );
+          RespuestasWidget(texto: respuestas[0].texto, esCorrecta: respuestas[0].esCorrecta, mostrarResultado: quizService.mostrarResultado, onTap: () {
+            setState(() {
+              quizService.responder(0);
+            });
+          },),
+        ]
+      ));
   }
 }

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   return MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.background,
+        backgroundColor: AppColor.backgroundVerde,
         title: Text("Beast Creator"),
       ),
       body: const QuizPage(),
