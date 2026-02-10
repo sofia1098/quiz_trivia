@@ -25,7 +25,6 @@ class _QuizPageState extends State<QuizPage> {
       child: Column(
         children: [
           PreguntaWidget(texto: pregunta.texto,),
-
           const SizedBox(height: 24),
           ...List.generate(respuestas.length, (index) {
             return RespuestasWidget(

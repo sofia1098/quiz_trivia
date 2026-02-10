@@ -16,16 +16,16 @@ class RespuestasWidget extends StatelessWidget {
   });
 
   Color _backgroundColor() {
-    // Antes de responder → gris
+    // Antes de responder
     if (!mostrarResultado) {
-      return Colors.grey.shade300;
+      return const Color.fromARGB(255, 241, 223, 178);
     }
 
     // Después de responder
     if (esCorrecta) {
-      return Colors.green;
+      return const Color.fromARGB(255, 129, 214, 132);
     } else {
-      return Colors.red;
+      return const Color.fromARGB(255, 238, 132, 124);
     }
   }
 
