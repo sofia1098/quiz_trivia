@@ -43,7 +43,7 @@ class RespuestasWidget extends StatelessWidget {
         onPressed: onTap,
         child: Text(
           texto,
-          style: TextStylesAnswer.respuesta,
+          style: TextStyles.respuesta,
         ),
       ),
     );
