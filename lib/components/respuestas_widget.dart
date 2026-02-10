@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_appproyect/core/text_styles.dart';
+import 'package:flutter_appproyect/core/app_color.dart';
 
 class RespuestasWidget extends StatelessWidget {
   final String texto;
@@ -18,14 +19,14 @@ class RespuestasWidget extends StatelessWidget {
   Color _backgroundColor() {
     // Antes de responder
     if (!mostrarResultado) {
-      return const Color.fromARGB(255, 241, 223, 178);
+      return AppColor.backgroundCrema;
     }
 
     // Después de responder
     if (esCorrecta) {
-      return const Color.fromARGB(255, 129, 214, 132);
+      return AppColor.backgroundVerde;
     } else {
-      return const Color.fromARGB(255, 238, 132, 124);
+      return AppColor.titulo;
     }
   }
 
