@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_appproyect/core/app_color.dart';
 import 'package:flutter_appproyect/core/text_styles.dart';
 
 class PreguntaWidget extends StatefulWidget {
@@ -32,11 +31,8 @@ class _PreguntaWidgetState extends State<PreguntaWidget> {
   Widget build(BuildContext context) {
     return Text(
       widget.texto.substring(0, _charCount),
-      style: const TextStyle(
-        fontSize: 20,
-        color: AppColor.oscuro,
-        inherit: false,
-      ),
-    );
+      style: TextStyles.pregunta,
+      textAlign: TextAlign.left,
+      );
   }
 }

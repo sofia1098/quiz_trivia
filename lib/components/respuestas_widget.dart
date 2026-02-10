@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_appproyect/core/text_styles.dart';
 import 'package:flutter_appproyect/core/app_color.dart';
+import 'package:flutter_appproyect/core/text_styles.dart';
+
 
 class RespuestasWidget extends StatelessWidget {
   final String texto;
@@ -16,7 +17,7 @@ class RespuestasWidget extends StatelessWidget {
     required this.onTap,
   });
 
-  Color _backgroundColor() {
+  Color backgroundColor() {
     // Antes de responder
     if (!mostrarResultado) {
       return AppColor.backgroundCrema;
@@ -32,20 +33,24 @@ class RespuestasWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(vertical: 6),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: _backgroundColor(),
-          padding: const EdgeInsets.all(16),
-        ),
-        onPressed: onTap,
-        child: Text(
-          texto,
-          style: TextStyles.respuesta,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: SizedBox(
+        width: double.infinity,
+        child: ElevatedButton(
+          onPressed: () {
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 238, 217, 161),
+            padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(18.0),
+            ),
+          ), 
+          child: Text('Respuesta', style: TextStyles.respuesta
         ),
       ),
+      )
     );
   }
 }

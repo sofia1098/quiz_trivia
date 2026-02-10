@@ -40,8 +40,8 @@ class _QuizPageState extends State<QuizPage> {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(35, 32, 16, 70),
                     //PreguntaWidget(texto: pregunta.texto,),
-                    child: TypewriterText(
-                      '¿Qué día de la semana es hoy y que día será mañana?',
+                    child: PreguntaWidget(
+                      texto: '¿Qué día de la semana es hoy y que día será mañana?',
                     ),
                   ),
                 ),
